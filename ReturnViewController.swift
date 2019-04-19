@@ -222,11 +222,12 @@ class ReturnViewController: UIViewController, UIPickerViewDelegate,UIPickerViewD
         
     }
     
+
     //When check out button pressed, call the php script and save the data to database
     @IBAction func Return(_ sender: UIButton) {
         
         //creating parameters for the post request
-        let request = NSMutableURLRequest(url: NSURL(string: "http://pvbus.pvamu.edu:8181/CTE2/cte_ems/appreturn.php")! as URL)
+        let request = NSMutableURLRequest(url: NSURL(string: "your url")! as URL)
         request.httpMethod = "POST"
         
         let postString = "facID=\(self.facIdText.text!)&facName=\(self.facNameText.text!)&facDept=\(self.facDeptText.text!)&facPhone=\(self.facPhoneText.text!)&facEmail=\(self.facEmailText.text!)&equipmentId=\(self.equipmentIdText.text!)&equipmentType=\(self.equipmentTypeText.text!)&equipmentNotes=\(self.equipmentNotesText.text!)&cteStaff=\(self.staffTextBox.text!)"

@@ -8,7 +8,7 @@ class CheckOutReturnViewController: UIViewController,UIPickerViewDelegate,UIPick
     @IBOutlet weak var staffTextBox: UITextField!
     @IBOutlet weak var staffDropDown: UIPickerView!
     // create list
-    var list = ["Laurette Foster","Timothy Cole","Qing Yan","Natalie Williamson"]
+    var list = ["Staff 1","Staff2","Staff3","Staff4"]
     
     //Faculty text fields
     @IBOutlet weak var facIdText: UITextField!
@@ -226,7 +226,7 @@ class CheckOutReturnViewController: UIViewController,UIPickerViewDelegate,UIPick
     @IBAction func checkOut(_ sender: UIButton) {
         
         //creating parameters for the post request
-        let request = NSMutableURLRequest(url: NSURL(string: "http://localhost/CTE2/cte_ems/appcheckout.php")! as URL)
+        let request = NSMutableURLRequest(url: NSURL(string: "your url")! as URL)
         request.httpMethod = "POST"
         
         let postString = "facID=\(self.facIdText.text!)&facName=\(self.facNameText.text!)&facDept=\(self.facDeptText.text!)&facPhone=\(self.facPhoneText.text!)&facEmail=\(self.facEmailText.text!)&equipmentId=\(self.equipmentIdText.text!)&equipmentType=\(self.equipmentTypeText.text!)&equipmentNotes=\(self.equipmentNotesText.text!)&cteStaff=\(self.staffTextBox.text!)"

@@ -2,7 +2,8 @@ import UIKit
 
 class TrackViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    final let urlString = "http://localhost/CTE2/cte_ems/service.php"
+    final let urlString = "Your url"
+
     
     @IBOutlet weak var tableView: UITableView!
     
